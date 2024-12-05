@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     font-family: "roboto";
+}
 
+html{
+    background-color: #1B2430;
 }
 
 header{
@@ -17,29 +20,33 @@ header{
 }
 
 .main{
-    padding-top: 47px;
-    padding-bottom: 124px;
+    padding-top: 2.94rem;
+    padding-bottom: 7.75rem;
     max-width: 1200px;
     margin: auto;
     background-color: white;
 }
 
+main{
+    background-color: white;
+}
+
 .main h2{
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 footer{
     background-color: #1B2430;
     color: white;
-    padding-bottom: 5px;
+    padding-bottom: 0.31rem;
 }
 
 header .content{
     max-width: 1200px;
     margin: auto ;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 0.5px;
     display: flex;
     justify-content: space-between;
 }
@@ -55,8 +62,7 @@ header nav ul{
 }
 
 nav li{
-    
-    font-size: 12px;
+    font-size: 1.06rem;
 }
 
 nav ul li a{
@@ -151,12 +157,13 @@ footer .content{
 .article , .spe{
     display: flex;
     flex-direction: row;
-    margin: 20px 0px;
-    align-content: center;
+    margin: 1.25rem 0px;
+    align-items: center;
 }
 
 .article img{
-    width: 180px;
+    width: 300px;
+    height: 284px;
 }
 
 .article p{
@@ -164,40 +171,45 @@ footer .content{
 }
 
 .rightblock{
-    margin-left: 30px;
+    margin-left: 8.125rem;
     width: 100%;
 }
 
 .leftblock{
     width: 100%;
-    margin-right: 30px;
+    margin-right: 8.125rem;
 }
 
 .date{
     background-color: #1B2430;
     color: white;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     border-radius: 10px;
-    margin-left: 26px;
+    margin-left: 1.625rem;
+    box-shadow: 0px 5px 5px grey;
 }
 
 .tellurique{
     background-color: #D6D5A8;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     border-radius: 10px;
+    box-shadow: 0px 5px 5px grey;
 }
 
 .gaz{
     background-color: blueviolet;
     color: white;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     border-radius: 10px;
+    box-shadow: 0px 5px 5px grey;
 }
 
 .hr{
     align-items: center;
     display: flex;
     text-align: center;
+    margin: 6.687rem 0;
+    text-transform: uppercase;
 }
 
 .hr::before , .hr::after{
@@ -205,9 +217,14 @@ footer .content{
     content: "";
     flex: 1;
     height: .025em;
-    margin: 0.5;
+    margin: 0.937rem;
 }
 
 .article{
-    margin: 20px 0px;
+    margin: 3.937rem 0px;
 }
+/*
+@media screen () {
+    
+}
+*/
