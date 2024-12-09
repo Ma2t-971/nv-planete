@@ -6,12 +6,13 @@
 
 html{
     background-color: #1B2430;
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 header{
     background-color: #1B2430;
     font-size: 0;
-    width: 100%;
 }
 
 .entt{
@@ -29,11 +30,13 @@ header{
 
 main{
     background-color: white;
+    padding: 0px 30px;
 }
 
 .main h2{
     font-size: 2rem;
     margin-bottom: 1rem;
+    scroll-margin-top: 150px;
 }
 
 footer{
@@ -43,16 +46,26 @@ footer{
 }
 
 header .content{
+    padding-left: 0.5rem;
+    position: fixed;
+    background-color: #1B2430;
+    width: 100%;
+}
+
+header .content nav{
     max-width: 1200px;
     margin: auto ;
-    align-items: center;
-    padding-left: 0.5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header .content img{
     height: 30px;
+}
+
+header .content img:nth-of-type(2){
+    visibility: hidden;
 }
 
 header nav ul{
@@ -80,8 +93,6 @@ nav li:hover{
 nav li:last-of-type{
     margin-right: 5px;
 }
-
-
 
 .pdp ul{
     list-style-type: none;
@@ -223,8 +234,89 @@ footer .content{
 .article{
     margin: 3.937rem 0px;
 }
-/*
-@media screen () {
+
+@media screen and (max-width:1024px) {
     
+    .main h2{
+        scroll-margin-top: 120px;
+    }
 }
-*/
+
+@media screen and (max-width:768px) {
+
+    .main h2{
+        text-align: center;
+        scroll-margin-top: 80px;
+    }
+    .article:nth-of-type(2n){
+        flex-direction: column;
+    }
+
+    .article:nth-of-type(2n+1){
+        flex-direction: column-reverse;
+    }
+
+    .spe{
+        justify-content: center;
+    }
+
+    .leftblock{
+        margin: auto;
+    }
+
+    .rightblock{
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:637px){
+    header .content nav {
+        transition: 2s;
+        opacity: 0.5;
+        position: absolute;
+        background-color: #1B2430;
+        left: 0;
+        width: fit-content;
+        padding: 0.3rem;
+        height: fit-content;
+        align-items: normal;
+        padding-bottom: 0;
+        ul{
+            display: none;
+        }
+    }
+    header .content img:first-of-type{
+        display: none;
+    }
+    
+    header .content img:nth-of-type(2){
+        visibility: visible;
+    }
+
+    .main h2{
+        scroll-margin-top: 30px;
+    }
+
+    header .content nav:hover{
+        width: fit-content;
+        opacity: 1;
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+}
+
+@media screen and (max-width:599px) {
+    .article img{
+        width: 150px;
+        height: 142px;
+    }
+
+    .footer .content{
+        flex-direction: row;
+
+    }
+}
